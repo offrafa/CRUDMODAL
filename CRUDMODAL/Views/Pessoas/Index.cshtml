@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Pessoas Cadastradas";
+}
+
+<div class="p-5">
+    <div class="border border-light border-3 rounded">
+        <div class="container">
+            <div class="p-5">
+                <div class="row">
+                    <div class="col-8">
+                        <h6>Pessoas cadastradas</h6>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-sm btn-outline-success novaPessoa">Nova pessoa</button>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="p-5 rounded shadow-sm" id="divTabela">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal" class="modal fade" role="dialog">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title"></h6>
+            </div>
+
+            <div class="modal-body">
+                <input type="hidden" class="form-control form-control-sm pessoaId" />
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" class="form-control form-control-sm nome" />
+                    <span class="text-danger erroNome d-none"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Idade</label>
+                    <input type="number" class="form-control form-control-sm idade" />
+                    <span class="text-danger erroIdade d-none">Digite um número</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Profissão</label>
+                    <input type="text" class="form-control form-control-sm profissao" />
+                    <span class="text-danger erroProfissao d-none">Digite uma profissão</span>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <input type="button" value="Salvar" class="btn btn-sm btn-outline-success btnSalvar" />
+                    <input type="button" value="Cancelar" class="btn btn-sm btn-light" data-bs-dismiss="modal" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section scripts {
+    <script>
+
+    </script>
+}
